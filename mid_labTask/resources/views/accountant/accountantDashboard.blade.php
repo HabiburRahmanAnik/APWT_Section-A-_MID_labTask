@@ -18,13 +18,8 @@
  			</td>
 	 	</tr>
 	 	<tr height="400px">
-	 		<td width="300px">
-	 			<ul>
-					<li><a href="{{route('admin.index')}}">Dashboard</a></li>
-					<li><a href="{{route('admin.addIndex')}}">Add User</a></li>
-	 			</ul>
-	 		</td>
-	 		<td><h3>Welcome Admin Panel</h3></td>
+	 		<td></td>
+	 		<td><h3>Welcome to Accountant dashboard</h3></td>
 	 	</tr>
 		<tr height="50px">
 			<td colspan="3" align="center">

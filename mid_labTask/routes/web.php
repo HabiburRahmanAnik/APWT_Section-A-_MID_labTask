@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/login','LoginController@index')->name('login.index');
+Route::get('/logout','LogoutController@logout')->name('logout');
 Route::post('/login','LoginController@verify')->name('login.verify');
 Route::get('/registration','RegistrationController@index')->name('registration.index');
 Route::post('/registration','RegistrationController@registration')->name('registration.registration');
@@ -32,7 +33,4 @@ Route::get('user/delete/{id}',"AdminController@delete")->name('admin.delete');
 Route::get('user/edit/{id}',"AdminController@edit")->name('admin.edit');
 Route::post('user/edit/{id}',"AdminController@update")->name('admin.update');
 
-//product
-// Route::get('product/addProduct',"ProductController@addProductView")->name('product.addProductView');
-// Route::get('user/upcomingProduct',"ProductController@upcomingProduct")->name('product.upcomingProduct');
-// Route::get('user/existingProduct',"ProductController@existingProduct")->name('product.existingProduct');
+
