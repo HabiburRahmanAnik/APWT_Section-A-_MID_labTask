@@ -7,6 +7,8 @@
     <title>Add Product</title>
 </head>
 <body>
+    <a href="{{ route('admin.index') }}">back</a>
+    <h2>Add Product</h2>
     <form method="POST">
         {{ csrf_field() }}
         <table>
@@ -34,10 +36,16 @@
             <tr>
                 <td><label>Vendor Name</label></td>
                 <td>
-                    <select name="vendorId">
-                    
+                    <select name="vendor_id">
+                    @foreach ($vendorName as $item)
+                        <option value="{{$item->vendor_id}}">{{$item->name}}</option>
+                    @endforeach
                     </select>
                 </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="add" name="add"></td>
             </tr>
         </table>
     </form>

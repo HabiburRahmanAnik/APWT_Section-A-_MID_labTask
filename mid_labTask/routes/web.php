@@ -35,5 +35,6 @@ Route::post('user/edit/{id}',"AdminController@update")->name('admin.update');
 
 //product
 Route::get('product/addProduct',"ProductController@addProductView")->name('product.addProductView');
+Route::post('product/addProduct',"ProductController@addProduct")->name('product.addProduct');
 Route::get('user/upcomingProduct',"ProductController@upcomingProduct")->name('product.upcomingProduct');
 Route::get('user/existingProduct',"ProductController@existingProduct")->name('product.existingProduct');
