@@ -32,3 +32,7 @@ Route::get('/userList',"AdminController@userlist")->name('admin.userlist');
 Route::get('user/delete/{id}',"AdminController@delete")->name('admin.delete');
 Route::get('user/edit/{id}',"AdminController@edit")->name('admin.edit');
 Route::post('user/edit/{id}',"AdminController@update")->name('admin.update');
+
+//accountant
+
+Route::get('/accountant/dashboard','AccountantController@index')->name('accountant.index');
