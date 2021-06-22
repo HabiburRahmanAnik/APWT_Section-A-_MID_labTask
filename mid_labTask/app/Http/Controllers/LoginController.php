@@ -27,7 +27,7 @@ class LoginController extends Controller {
             $req->session()->put( 'uname', $uname );
             return redirect( )->route('admin.index');
         } elseif((count( $result ) > 0 ) && $type == "customer"){
-            
+            return \redirect()->route('customer.index');
         } elseif((count( $result ) > 0 ) && $type == "accoutant"){
             return \redirect()->route('accountant.index');
         }else {

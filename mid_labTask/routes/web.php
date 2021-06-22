@@ -36,3 +36,9 @@ Route::post('user/edit/{id}',"AdminController@update")->name('admin.update');
 //accountant
 
 Route::get('/accountant/dashboard','AccountantController@index')->name('accountant.index');
+
+
+
+//customer
+Route::get('/customer/dashboard','CustomerController@index')->name('customer.index');
+
