@@ -6,12 +6,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller {
-    public function index() {
-        return view( 'admin.adminDashboard' );
+    public function index(Request $req) {
+        $uname = $req->session()->get('uname');
+        return view( 'admin.adminDashboard' )->with('uname',$uname);
     }
 
-    public function addIndex() {
-        return view( 'admin.addUser' );
+    public function addIndex(Request $req) {
+        $uname = $req->session()->get('uname');
+        return view( 'admin.addUser' )->with('uname',$uname);
     }
 
     public function addUser( Request $req ) {
@@ -28,9 +30,10 @@ class AdminController extends Controller {
         ] );
     }
 
-    public function userlist() {
+    public function userlist(Request $req) {
+        $uname = $req->session()->get('uname');
         $users = DB::table( 'users' )->get();
-        return \view( 'admin.userList' )->with( 'userlist', $users );
+        return \view( 'admin.userList' )->with( 'userlist', $users )->with('uname',$uname);
     }
 
     public function delete( $id ) {
