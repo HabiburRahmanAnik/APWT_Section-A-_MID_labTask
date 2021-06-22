@@ -53,8 +53,8 @@
                         <td>
                             
                         <!-- <a href="/user/userList/detsils/{{$user->id}}">details</a> | -->
-                            <a href="/user/userList/edit/{{$user->id}}">Edit</a> |
-                            <a href="/user/userList/delete/{{$user->id}}">Delete</a>
+                            <a href="/user/edit/{{$user->id}}">Edit</a> |
+                            <a href="/user/delete/{{$user->id}}">Delete</a>
                         </td>
                     </tr>
                 @endforeach
