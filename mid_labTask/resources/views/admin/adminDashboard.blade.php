@@ -22,7 +22,7 @@
 	 			<ul>
 				 <li><a href="{{route('admin.index')}}">Dashboard</a></li>
 					<li><a href="{{route('admin.addIndex')}}">Add User</a></li>
-					<li><a href="userList.php">View user list</a></li>
+					{{-- <li><a href="userList.php">View user list</a></li> --}}
 	 			</ul>
 	 		</td>
 	 		<td><h3>Welcome Admin Panel</h3></td>
