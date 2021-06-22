@@ -28,6 +28,8 @@ class LoginController extends Controller {
             return redirect( )->route('admin.index');
         } elseif((count( $result ) > 0 ) && $type == "customer"){
             
+        } elseif((count( $result ) > 0 ) && $type == "accoutant"){
+            return \redirect()->route('accountant.index');
         }else {
             $req->session()->flash( 'msg', 'Invalid username or password!' );
             return redirect( '/login' );

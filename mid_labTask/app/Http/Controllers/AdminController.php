@@ -28,6 +28,7 @@ class AdminController extends Controller {
             'companyName' => '',
             'phone'       => '',
         ] );
+        return \redirect()->route('admin.userlist');
     }
 
     public function userlist(Request $req) {
