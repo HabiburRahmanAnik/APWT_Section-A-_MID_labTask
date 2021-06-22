@@ -20,8 +20,7 @@
             <td width="300px">
                 <ul>
                     <li><a href="{{route('admin.index')}}">Dashboard</a></li>
-					<li><a href="{{route('admin.addIndex')}}">Add User</a></li>
-					<li><a href="{{route('admin.userlist')}}">View user list</a></li>
+
                 </ul>
             </td>
             <td>
