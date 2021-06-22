@@ -19,15 +19,12 @@
         <tr height="400px">
             <td width="300px">
                 <ul>
-                <li><a href="{{route('admin.index')}}">Dashboard</a></li>
-                   <li><a href="{{route('admin.addIndex')}}">Add User</a></li>
-                   <li><a href="userList.php">View user list</a></li>
-                   <li><a href="addProductCategory.php">Add Product Category</a></li>
-                   <li><a href="productCategoryList.php">Product category list</a></li>
-                   <li><a href="addTools.php">Add tools</a></li>
-                   <li><a href="viewTools.php">view tools</a></li>
-                   <li><a href="news.php">News</a></li>
-                   <li><a href="viewProfile.php">View Profile</a></li>
+                    <li><a href="{{route('admin.index')}}">Dashboard</a></li>
+                    <li><a href="{{route('admin.addIndex')}}">Add User</a></li>
+                    <li><a href="userList.php">View user list</a></li>
+                    <li><a href="{{ route('product.addProductView') }}">Add Product</a></li>
+				    <li><a href="{{ route('product.upcomingProduct') }}">existing Product</a></li>
+				    <li><a href="{{ route('product.existingProduct') }}">Upcoming Product</a></li>
                 </ul>
             </td>
             <td>
