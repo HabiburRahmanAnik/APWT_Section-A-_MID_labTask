@@ -23,6 +23,15 @@ class ProductController extends Controller
             'vendor_id'=>$req->vendor_id,
             'lastUpdate'=>date('Y-m-d H:i:s'),
         ]);
-        
+    }
+
+    public function existingProduct(){
+        $existingProduct = DB::table('products')->where('status','existing')->get();
+        return \view('admin.existingProduct')->with('existingProduct',$existingProduct);
+    }
+
+    public function upcomingProduct(){
+       $upcomingProduct = DB::table('products')->where('status','upcoming')->get();
+       return \view('admin.upcomingProduct')->with('upcomingProduct',$upcomingProduct);
     }
 }
