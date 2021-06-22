@@ -27,8 +27,10 @@ class LoginController extends Controller {
             $req->session()->put( 'uname', $uname );
             return redirect( )->route('admin.index');
         } elseif((count( $result ) > 0 ) && $type == "customer"){
+            $req->session()->put( 'uname', $uname );
             return \redirect()->route('customer.index');
         } elseif((count( $result ) > 0 ) && $type == "accoutant"){
+            $req->session()->put( 'uname', $uname );
             return \redirect()->route('accountant.index');
         }else {
             $req->session()->flash( 'msg', 'Invalid username or password!' );
