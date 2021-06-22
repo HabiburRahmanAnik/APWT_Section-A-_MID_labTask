@@ -21,7 +21,7 @@
 	 			<ul>
 					<li><a href="{{route('admin.index')}}">Dashboard</a></li>
 					<li><a href="{{route('admin.addIndex')}}">Add User</a></li>
-					<li><a href="userList.php">View user list</a></li>
+					<li><a href="{{route('admin.userlist')}}">View user list</a></li>
 					<li><a href="addProductCategory.php">Add Product Category</a></li>
 					<li><a href="productCategoryList.php">Product category list</a></li>
 					<li><a href="addTools.php">Add tools</a></li>

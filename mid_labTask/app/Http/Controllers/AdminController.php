@@ -27,4 +27,14 @@ class AdminController extends Controller
             'phone'=>''
         ]);
     }
+
+    public function userlist(){
+        $users = DB::table('users')->get();
+        return \view('admin.userList')->with('userlist',$users);
+    }
+
+    public function delete($id){
+        DB::table('users')->where('id',$id)->delete();
+        return \redirect()->route('admin.userlist');
+    }
 }
