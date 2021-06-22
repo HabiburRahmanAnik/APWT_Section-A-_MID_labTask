@@ -14,14 +14,21 @@ class LoginController extends Controller {
 
     public function verify( LoginRequest $req ) {
         $result = DB::table( 'users' )
-            ->where( 'username', $req->email )
+            ->where( 'email', $req->email )
             ->where( 'password', $req->password )
             ->get();
 
-        if ( count( $result ) > 0 ) {
-            $req->session()->put( 'uname', $req->uname );
-            return redirect( '/home' );
-        } else {
+        foreach($result as $entity){
+            $uname = $entity->username;
+            $type=$entity->type;
+        }
+
+        if ( (count( $result ) > 0 ) && $type == "admin") {
+            $req->session()->put( 'uname', $uname );
+            return redirect( )->route('admin.index');
+        } elseif((count( $result ) > 0 ) && $type == "customer"){
+            
+        }else {
             $req->session()->flash( 'msg', 'Invalid username or password!' );
             return redirect( '/login' );
         }
