@@ -27,3 +27,4 @@ Route::post('/registration','RegistrationController@registration')->name('regist
 Route::get('/admin/dashboard','AdminController@index')->name('admin.index');
 Route::get('/addUser','AdminController@addIndex')->name('admin.addIndex');
 Route::post('/addUser','AdminController@addUser')->name('admin.addUser');
+Route::get('/userList',"AdminController@userlist")->name('admin.userlist');
